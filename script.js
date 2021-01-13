@@ -11,7 +11,7 @@ inquirer
     {
       type: 'input',
       message: 'How would you describe your project?',
-      name: 'Description',
+      name: 'description',
     },
     {
       type: 'input',
@@ -31,7 +31,7 @@ inquirer
     {
       type: 'input',
       message: 'Who were the contributers?',
-      name: 'Contributing',
+      name: 'contributing',
     },
     {
       type: 'input',
@@ -46,7 +46,7 @@ inquirer
 
   ]).then((response) => {
       console.table(response)
-      var template = `# The title of my Readme is ${response.name}\n ## Eating tacos is best\n \n ### Instructions for installation \n ${response.installation} \n #### usage \n ${response.usage} \n ##### license \n ${response.license} \n ###### contributing \n ${response.contributing} \n ### Tests \n ${response.tests} \n ### Questions \n ${response.questions} \n ## Table of Contents \n \n 1. Title \n 2. Installation`
+      var template = `# The title of my Readme is ${response.name}\n ## Eating tacos is best\n \n ### Instructions for installation \n ${response.installation} \n ### Desription \n ${response.desciption} \n #### usage \n ${response.usage} \n ##### license \n ${response.license} \n ###### contributing \n ${response.contributing} \n ### Tests \n ${response.tests} \n ### Questions \n ${response.questions} \n ## Table of Contents \n \n 1. Title \n 2. Installation`
 
       fs.writeFile("readme.md", template, (err) => {
         if(err) console.error(err)
